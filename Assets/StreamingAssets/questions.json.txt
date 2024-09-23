@@ -1,0 +1,14 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "Земля плоская?",
+            "answer": false
+        },
+        {
+            "id": 2,
+            "question": "Солнце — звезда?",
+            "answer": true
+        }
+    ]
+}
