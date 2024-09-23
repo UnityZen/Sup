@@ -179,6 +179,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -635,7 +648,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pirate-01-sheet_0: 4702556640058637150
+      Pirate-01-sheet_1: 61956742164548535
+      Pirate-01-sheet_10: -1146357502141588730
+      Pirate-01-sheet_11: 7389721596889010182
+      Pirate-01-sheet_12: 5948299738275245574
+      Pirate-01-sheet_13: 1519510984295252686
+      Pirate-01-sheet_14: 6750118097979798161
+      Pirate-01-sheet_15: 555563980318124255
+      Pirate-01-sheet_16: 4601501598111550462
+      Pirate-01-sheet_17: 3888827704115166175
+      Pirate-01-sheet_18: 139271666052591521
+      Pirate-01-sheet_19: 146620402239270587
+      Pirate-01-sheet_2: 5602802359279912680
+      Pirate-01-sheet_3: 7583621462838713275
+      Pirate-01-sheet_4: 8961682902478575248
+      Pirate-01-sheet_5: -8627879552159615204
+      Pirate-01-sheet_6: -4242935581716036759
+      Pirate-01-sheet_7: 3789724581760644874
+      Pirate-01-sheet_8: 4628988198284888755
+      Pirate-01-sheet_9: -661831689969892505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
