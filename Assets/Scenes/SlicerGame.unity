@@ -290,7 +290,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.11438231, g: 0.14423278, b: 0.19245279, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -493,6 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruits:
   - {fileID: 494361611426199184, guid: 64b3cb54ba799c34a9c80787675cacf2, type: 3}
+  - {fileID: 7454373130549269354, guid: 85cd42413a79c674aa90fcc7a3106c4c, type: 3}
   minSpawnDelay: 0.3
   maxSpawnDelay: 1
   minForce: 10

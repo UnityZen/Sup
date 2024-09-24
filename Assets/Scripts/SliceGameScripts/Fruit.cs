@@ -44,12 +44,12 @@ public class Fruit : MonoBehaviour
 
         // Apply forces to the halves in opposite directions
         Vector2 perpendicularDir = Vector2.Perpendicular(bladeDirection);  // Get a perpendicular direction to the blade
-        leftRb.AddForce((perpendicularDir + Vector2.down) * sliceForce, ForceMode2D.Impulse);
+        leftRb.AddForce((perpendicularDir + Vector2.up) * sliceForce, ForceMode2D.Impulse);
         rightRb.AddForce((-perpendicularDir + Vector2.down) * sliceForce, ForceMode2D.Impulse);
 
         // Apply random torque for rotation
-        leftRb.AddTorque(Random.Range(-10f, 10f));
-        rightRb.AddTorque(Random.Range(-10f, 10f));
+        leftRb.AddTorque(Random.Range(-30f, 30f));
+        rightRb.AddTorque(Random.Range(-30f, 30f));
 
         // Destroy the original fruit
         Destroy(gameObject);

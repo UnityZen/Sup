@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5193078028427638411}
   - component: {fileID: 8405489107929940147}
   m_Layer: 0
-  m_Name: Fruit
+  m_Name: BeeHive
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
