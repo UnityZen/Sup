@@ -31,6 +31,7 @@ public class PlayerStatsManager : MonoBehaviour
 
     // UI Sliders
     public Slider hungerSlider;
+    public Image hungerImage;
     public Slider safetySlider;
     public Slider pleasureSlider;
     public Slider knowledgeSlider;
@@ -152,6 +153,7 @@ public class PlayerStatsManager : MonoBehaviour
     private void UpdateUI()
     {
         hungerSlider.value = hunger;
+        hungerImage.fillAmount = hunger / 100f;
         safetySlider.value = safety;
         pleasureSlider.value = pleasure;
         knowledgeSlider.value = knowledge;
