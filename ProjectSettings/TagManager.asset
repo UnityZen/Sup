@@ -7,6 +7,11 @@ TagManager:
   - Fruit
   - Blade
   - Manager
+  - Ground
+  - Obstacle
+  - LowObstacle
+  - HighObstacle
+  - ComboObstacle
   layers:
   - Default
   - TransparentFX
