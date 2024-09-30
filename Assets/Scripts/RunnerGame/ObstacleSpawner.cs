@@ -4,52 +4,69 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public GameObject[] obstacles;      // Префабы препятствий
-    public float spawnRate = 2f;        // Начальная скорость спавна
-    public float spawnRateDecrease = 0.05f; // Скорость уменьшения времени между спавнами
-    public float minSpawnRate = 1.2f;     // Минимальный интервал между спавнами
+    public GameObject[] obstacles;      // Prefabs for the obstacles
+    public float spawnRate = 2f;        // Initial spawn rate
+    public float spawnRateDecrease = 0.05f; // Rate at which spawn interval decreases
+    public float minSpawnRate = 1.2f;   // Minimum spawn interval
 
-    public float obstacleSpeed = 5f;    // Начальная скорость препятствий
-    public float speedIncrease = 0.1f;  // Скорость увеличения скорости препятствий
-    public float maxSpeed = 7f;        // Максимальная скорость
+    public float obstacleSpeed = 5f;    // Initial speed of the obstacles
+    public float speedIncrease = 0.1f;  // Rate at which obstacle speed increases
+    public float maxSpeed = 7f;         // Maximum speed for the obstacles
 
     private float nextSpawn = 0f;
 
     void Update()
     {
-        // Спавн препятствий через определенный промежуток времени
+        // Handle obstacle spawning based on time
         if (Time.time >= nextSpawn)
         {
             SpawnObstacle();
             nextSpawn = Time.time + spawnRate;
         }
 
-        // Увеличение скорости препятствий с течением времени
+        // Increase obstacle speed over time
         if (obstacleSpeed < maxSpeed)
         {
             obstacleSpeed += speedIncrease * Time.deltaTime;
-            //Debug.Log(obstacleSpeed);
         }
 
-        // Уменьшение интервала спавна с течением времени
+        // Decrease spawn rate over time
         if (spawnRate > minSpawnRate)
         {
             spawnRate -= spawnRateDecrease * Time.deltaTime;
-            Debug.Log(spawnRate);
-
         }
-        else {
+        else
+        {
             spawnRate = minSpawnRate;
         }
     }
 
     void SpawnObstacle()
     {
-        int randomIndex = Random.Range(0, obstacles.Length); // Выбор случайного препятствия
+        int randomIndex = Random.Range(0, obstacles.Length); // Select a random obstacle
 
+        // Instantiate the obstacle at the spawner's position
         GameObject obstacle = Instantiate(obstacles[randomIndex], new Vector3(transform.position.x, obstacles[randomIndex].transform.position.y, 0), Quaternion.identity);
 
-        // Задаем скорость препятствию
-        obstacle.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(-obstacleSpeed, 0);
+        // Start the movement coroutine
+        StartCoroutine(MoveObstacle(obstacle));
+    }
+
+    IEnumerator MoveObstacle(GameObject obstacle)
+    {
+        while (obstacle != null)
+        {
+            // Move the obstacle smoothly to the left
+            obstacle.transform.Translate(Vector2.left * obstacleSpeed * Time.deltaTime);
+
+            // Destroy the obstacle when it moves off-screen
+            if (obstacle.transform.position.x < -10f) // Adjust this value based on your screen width
+            {
+                Destroy(obstacle);
+                yield break;
+            }
+
+            yield return null;
+        }
     }
 }
