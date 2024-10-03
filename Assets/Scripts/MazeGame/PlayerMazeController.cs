@@ -15,6 +15,11 @@ public class PlayerMazeController : MonoBehaviour
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
+        
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - transform.position).normalized;
+            transform.right = direction;  // Rotate the player or flashlight towards the mouse
+         
     }
 
     void FixedUpdate()
