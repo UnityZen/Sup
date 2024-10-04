@@ -17,18 +17,27 @@ public class EditorSceneController : MonoBehaviour
     public List<Vector2> points = new List<Vector2>(); // Список точек для сохранения
 
     private string filePath; // Путь к файлу сохранения
+    private string spriteName; // Имя спрайта для создания имени файла
 
     void Start()
     {
         // Отображение изображения на сцене
         if (image != null)
         {
+            // Создаём спрайт из текстуры
             Sprite sprite = Sprite.Create(image, new Rect(0, 0, image.width, image.height), new Vector2(0.5f, 0.5f));
             spriteRenderer.sprite = sprite;
-        }
 
-        // Указываем путь для сохранения данных
-        filePath = Path.Combine(Application.persistentDataPath, "pointsData.json");
+            // Получаем имя текстуры для использования в названии файла
+            spriteName = image.name;
+
+            // Указываем путь для сохранения данных (будет использоваться spriteName)
+            filePath = Path.Combine(Application.persistentDataPath, spriteName + "_points.json");
+        }
+        else
+        {
+            Debug.LogError("Image is not set.");
+        }
     }
 
     void Update()
@@ -43,16 +52,32 @@ public class EditorSceneController : MonoBehaviour
             // Создаём визуализацию точки
             Instantiate(pointPrefab, new Vector3(point.x, point.y, 0), Quaternion.identity);
         }
+
+        // Проверка нажатия клавиши пробела для сохранения точек
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SavePoints(); // Сохраняем точки при нажатии пробела
+        }
     }
 
     // Метод для сохранения точек в JSON
     public void SavePoints()
     {
+        if (string.IsNullOrEmpty(spriteName))
+        {
+            Debug.LogError("Sprite name is empty. Cannot save points.");
+            return;
+        }
+
+        // Создаём объект для сохранения данных
         PointsData data = new PointsData();
         data.points = points.ToArray(); // Конвертируем список точек в массив
 
-        string json = JsonUtility.ToJson(data); // Конвертируем объект в JSON строку
-        File.WriteAllText(filePath, json); // Записываем JSON в файл
+        // Преобразуем объект данных в JSON строку
+        string json = JsonUtility.ToJson(data);
+
+        // Записываем JSON в файл, перезаписывая, если он уже существует
+        File.WriteAllText(filePath, json);
 
         Debug.Log($"Points saved to: {filePath}");
     }
