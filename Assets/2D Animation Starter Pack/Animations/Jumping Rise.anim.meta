@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a42274da6ebd9e940b75eba6e5ed6f8f
+timeCreated: 1473906020
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72104
+  packageName: 2D Animation Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/2D Animation Starter Pack/Animations/Jumping Rise.anim
+  uploadId: 138210

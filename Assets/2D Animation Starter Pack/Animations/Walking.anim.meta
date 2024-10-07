@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 016f0378e52bb2c4ba8c6317b063ad79
+timeCreated: 1473889579
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72104
+  packageName: 2D Animation Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/2D Animation Starter Pack/Animations/Walking.anim
+  uploadId: 138210

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d12bbc1f1ca4ce74dba026edfa1eea18
+timeCreated: 1473905940
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72104
+  packageName: 2D Animation Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/2D Animation Starter Pack/Animations/Jumping Launch.anim
+  uploadId: 138210

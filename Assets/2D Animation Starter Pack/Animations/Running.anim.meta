@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: de386fd7a71850249b9d584bccbaa1da
+timeCreated: 1473896941
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72104
+  packageName: 2D Animation Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/2D Animation Starter Pack/Animations/Running.anim
+  uploadId: 138210

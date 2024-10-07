@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c896979f41a98334a91317df83a970ba
+timeCreated: 1474472221
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 72104
+  packageName: 2D Animation Starter Pack
+  packageVersion: 1.0
+  assetPath: Assets/2D Animation Starter Pack/Demo/Character.controller
+  uploadId: 138210
